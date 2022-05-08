@@ -5,7 +5,7 @@ plugins {
     id "com.github.ben-manes.versions" version "0.42.0"
     id 'io.freefair.lombok' version '6.4.1'
     id 'jacoco'
-    id 'java'
+    id 'com.adarshr.test-logger' version '3.2.0'
 }
 
 group 'hexlet.code'
@@ -22,10 +22,6 @@ dependencies {
 
 compileJava {
     options.release = 17
-}
-
-application {
-    mainClass = 'hexlet.code.App'
 }
 
 test {
