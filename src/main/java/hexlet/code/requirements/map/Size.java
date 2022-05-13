@@ -8,9 +8,9 @@ public final class Size implements Requirable {
     private final int size;
     private final BaseSchema schema;
 
-    public Size(BaseSchema schema, int size) {
-        this.size = size;
-        this.schema = schema;
+    public Size(BaseSchema schem, int siz) {
+        this.size = siz;
+        this.schema = schem;
     }
 
     @Override

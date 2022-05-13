@@ -5,8 +5,8 @@ import hexlet.code.schemas.BaseSchema;
 public final class Required implements Requirable {
     private final BaseSchema schema;
 
-    public Required(BaseSchema schema) {
-        this.schema = schema;
+    public Required(BaseSchema schem) {
+        this.schema = schem;
     }
 
     /**

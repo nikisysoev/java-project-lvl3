@@ -8,9 +8,9 @@ public final class Shape implements Requirable {
     private final Map<String, BaseSchema> shapes;
     private final BaseSchema schema;
 
-    public Shape(BaseSchema schema, Map<String, BaseSchema> shapes) {
-        this.shapes = shapes;
-        this.schema = schema;
+    public Shape(BaseSchema schem, Map<String, BaseSchema> shape) {
+        this.shapes = shape;
+        this.schema = schem;
     }
 
     @Override

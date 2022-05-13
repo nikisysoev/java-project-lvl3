@@ -100,16 +100,12 @@
 
         <!-- Checks for Javadoc comments.                     -->
         <!-- See https://checkstyle.org/config_javadoc.html -->
-        <!-- No need for Javadoc -->
-        <module name="JavadocType">
-            <property name="severity" value="ignore"/>
-        </module>
-        <module name="JavadocMethod">
-            <property name="severity" value="ignore"/>
-        </module>
-        <module name="JavadocVariable">
-            <property name="severity" value="ignore"/>
-        </module>
+        <module name="InvalidJavadocPosition"/>
+        <module name="JavadocMethod"/>
+        <module name="JavadocType"/>
+        <!-- <module name="JavadocVariable"/> -->
+        <module name="JavadocStyle"/>
+        <!-- <module name="MissingJavadocMethod"/> -->
 
         <!-- Checks for Naming Conventions.                  -->
         <!-- See https://checkstyle.org/config_naming.html -->
@@ -167,10 +163,7 @@
         <!-- See https://checkstyle.org/config_coding.html -->
         <module name="EmptyStatement"/>
         <module name="EqualsHashCode"/>
-        <module name="HiddenField" >
-            <property name="ignoreSetter" value="true" />
-            <property name="ignoreConstructorParameter" value="true" />
-        </module>
+        <module name="HiddenField"/>
         <module name="IllegalInstantiation"/>
         <module name="InnerAssignment"/>
         <module name="MagicNumber"/>

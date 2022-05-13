@@ -7,9 +7,9 @@ public final class Contained implements Requirable {
     private final String substring;
     private final BaseSchema schema;
 
-    public Contained(String substring, BaseSchema schema) {
-        this.substring = substring;
-        this.schema = schema;
+    public Contained(String substrin, BaseSchema schem) {
+        this.substring = substrin;
+        this.schema = schem;
     }
 
     @Override

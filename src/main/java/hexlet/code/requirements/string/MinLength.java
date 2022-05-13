@@ -7,9 +7,9 @@ public final class MinLength implements Requirable {
     private final int length;
     private final BaseSchema schema;
 
-    public MinLength(int length, BaseSchema schema) {
-        this.length = length;
-        this.schema = schema;
+    public MinLength(int lengt, BaseSchema schem) {
+        this.length = lengt;
+        this.schema = schem;
     }
 
     @Override

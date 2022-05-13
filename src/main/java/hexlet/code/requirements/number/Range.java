@@ -8,17 +8,14 @@ public final class Range implements Requirable {
     private final int number2;
     private final BaseSchema schema;
 
-    public Range(BaseSchema schema, int number1, int number2) {
-        this.number1 = number1;
-        this.number2 = number2;
-        this.schema = schema;
+    public Range(BaseSchema schem, int num1, int num2) {
+        this.number1 = num1;
+        this.number2 = num2;
+        this.schema = schem;
     }
 
     @Override
     public boolean isValid(Object obj) {
-        if (!schema.isThatClass(obj)) {
-            return false;
-        }
         return ((Integer) obj) >= number1 && ((Integer) obj) <= number2;
     }
 }

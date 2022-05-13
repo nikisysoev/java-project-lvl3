@@ -27,6 +27,9 @@ public abstract class BaseSchema {
     }
 
     /**
+     *
+     * @param obj any Object
+     * @return always true
      */
     public boolean isNotEmpty(Object obj) {
         return true;

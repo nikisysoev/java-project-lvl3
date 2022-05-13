@@ -8,8 +8,8 @@ import java.util.Objects;
 public final class Positive implements Requirable {
     private final BaseSchema schema;
 
-    public Positive(BaseSchema schema) {
-        this.schema = schema;
+    public Positive(BaseSchema schem) {
+        this.schema = schem;
     }
 
     @Override

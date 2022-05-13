@@ -6,8 +6,8 @@ import java.util.Objects;
 public final class NotRequired implements Requirable {
     private final BaseSchema schema;
 
-    public NotRequired(BaseSchema schema) {
-        this.schema = schema;
+    public NotRequired(BaseSchema schem) {
+        this.schema = schem;
     }
 
     @Override
