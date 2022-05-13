@@ -1,6 +1,5 @@
 package hexlet.code.requirements.string;
 
-import hexlet.code.requirements.Required;
 import hexlet.code.requirements.Requirable;
 import hexlet.code.schemas.BaseSchema;
 

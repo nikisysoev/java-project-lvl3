@@ -19,9 +19,9 @@ public final class Shape implements Requirable {
             return false;
         }
         for (Map.Entry<String, Object> pair: ((Map<String, Object>) obj).entrySet()) {
-            BaseSchema schema = shapes.get(pair.getKey());
+            BaseSchema base = shapes.get(pair.getKey());
 
-            if (!schema.isValid(pair.getValue())) {
+            if (!base.isValid(pair.getValue())) {
                 return false;
             }
         }
