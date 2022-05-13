@@ -16,6 +16,6 @@ public final class Positive extends Required implements Requirable {
         if (Objects.isNull(obj)) {
             return true;
         }
-        return ((Integer) obj) >= 0;
+        return ((Integer) obj) > 0;
     }
 }

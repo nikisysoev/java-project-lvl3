@@ -13,6 +13,7 @@ class AppTest {
     private static final int FIVE = 5;
     private static final int SIX = 6;
     private static final int ZERO = 0;
+    private static final int TEN = 10;
 
     @Test
     void validateStringTest() {
@@ -65,9 +66,9 @@ class AppTest {
         assertEquals(true, schema.positive().isValid(SIX));
         assertEquals(false, schema.isValid(-SIX));
 
-        schema.range(FIVE, SIX);
+        schema.range(FIVE, TEN);
 
-        assertEquals(true, schema.isValid(SIX));
+        assertEquals(true, schema.isValid(FIVE));
         assertEquals(true, schema.isValid(SIX));
         assertEquals(false,  schema.isValid(ZERO));
         assertEquals(false,  schema.isValid(-SIX));
