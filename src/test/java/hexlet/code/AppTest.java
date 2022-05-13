@@ -119,7 +119,7 @@ class AppTest {
         human2.put("name", "Maya");
         human2.put("age", null); // true
 
-        assertEquals(false, schema.isValid(human2));
+        assertEquals(true, schema.isValid(human2));
 
         Map<String, Object> human3 = new HashMap<>();
         human3.put("name", "");
