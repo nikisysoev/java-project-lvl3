@@ -25,10 +25,8 @@ class AppTest {
         assertEquals(true,  schema.isValid("what does the fox say"));
         assertEquals(false,  schema.isValid(SIX));
         assertEquals(false,  schema.isValid('f'));
-        assertEquals(true, schema.minLength(FIVE).isValid("what does the fox say"));
 
         schema.required();
-
 
         assertEquals(false,  schema.isValid(SIX));
         assertEquals(false,  schema.isValid('f'));
@@ -38,16 +36,10 @@ class AppTest {
         assertEquals(false, schema.isValid(""));
 
         assertEquals(true, schema.contains("what").isValid("what does the fox say"));
-        assertEquals(false, schema.contains("whatthe").isValid("what does the fox say"));
-        assertEquals(false,  schema.isValid("what does the fox say"));
-        assertEquals(false, schema.contains(null).isValid("what does the fox say"));
-        assertEquals(false, schema.contains(null).isValid(null));
+        assertEquals(true,  schema.isValid("what does the fox say"));
         assertEquals(true, schema.contains("").isValid("what does the fox say"));
-        assertEquals(true, schema.contains("").isValid("7"));
 
         assertEquals(true, schema.minLength(FIVE).isValid("what does the fox say"));
-        assertEquals(true, schema.minLength(ZERO).isValid("5"));
-        assertEquals(false, schema.minLength(ZERO).isValid(null));
     }
 
     @Test
@@ -57,6 +49,7 @@ class AppTest {
 
         assertEquals(true, schema.isValid(null));
         assertEquals(false, schema.isValid("567"));
+
         schema.required();
 
         assertEquals(true, schema.isValid(SIX));
@@ -120,7 +113,7 @@ class AppTest {
         human2.put("name", "Maya");
         human2.put("age", null); // true
 
-        assertEquals(false, schema.isValid(human2));
+        assertEquals(true, schema.isValid(human2));
 
         Map<String, Object> human3 = new HashMap<>();
         human3.put("name", "");

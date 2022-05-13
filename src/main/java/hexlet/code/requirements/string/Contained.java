@@ -14,7 +14,7 @@ public final class Contained implements Requirable {
 
     @Override
     public boolean isValid(Object obj) {
-        if (!schema.isThatClass(obj) || !schema.isThatClass(substring)) {
+        if (!schema.isThatClass(substring)) {
             return false;
         }
         return String.valueOf(obj).contains(substring);

@@ -15,9 +15,6 @@ public final class Size implements Requirable {
 
     @Override
     public boolean isValid(Object obj) {
-        if (!schema.isThatClass(obj)) {
-            return false;
-        }
         return ((Map) obj).size() == size;
     }
 }

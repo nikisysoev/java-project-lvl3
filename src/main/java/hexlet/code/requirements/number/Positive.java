@@ -3,6 +3,8 @@ package hexlet.code.requirements.number;
 import hexlet.code.requirements.Requirable;
 import hexlet.code.schemas.BaseSchema;
 
+import java.util.Objects;
+
 public final class Positive implements Requirable {
     private final BaseSchema schema;
 
@@ -12,8 +14,8 @@ public final class Positive implements Requirable {
 
     @Override
     public boolean isValid(Object obj) {
-        if (!schema.isThatClass(obj)) {
-            return false;
+        if (Objects.isNull(obj)) {
+            return true;
         }
         return ((Integer) obj) > 0;
     }

@@ -14,9 +14,6 @@ public final class MinLength implements Requirable {
 
     @Override
     public boolean isValid(Object obj) {
-        if (!schema.isThatClass(obj)) {
-            return false;
-        }
         return String.valueOf(obj).length() >= length;
     }
 }
