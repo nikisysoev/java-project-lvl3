@@ -2,7 +2,7 @@ package hexlet.code.requirements;
 
 import hexlet.code.schemas.BaseSchema;
 
-public class Required implements Requirable {
+public final class Required implements Requirable {
     private final BaseSchema schema;
 
     public Required(BaseSchema schema) {

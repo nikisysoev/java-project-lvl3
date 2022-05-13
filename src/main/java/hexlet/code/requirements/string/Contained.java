@@ -1,24 +1,22 @@
 package hexlet.code.requirements.string;
 
-import hexlet.code.requirements.Required;
 import hexlet.code.requirements.Requirable;
 import hexlet.code.schemas.BaseSchema;
-import java.util.Objects;
 
-public final class Contained extends Required implements Requirable {
-    private String substring;
+public final class Contained implements Requirable {
+    private final String substring;
+    private final BaseSchema schema;
 
-    public Contained(String str, BaseSchema schem) {
-        super(schem);
-        this.substring = str;
+    public Contained(String substring, BaseSchema schema) {
+        this.substring = substring;
+        this.schema = schema;
     }
 
     @Override
     public boolean isValid(Object obj) {
-        if (!super.isValid(obj) || Objects.isNull(substring)) {
+        if (!schema.isThatClass(obj) || !schema.isThatClass(substring)) {
             return false;
         }
-
         return String.valueOf(obj).contains(substring);
     }
 }

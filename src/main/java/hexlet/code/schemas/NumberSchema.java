@@ -22,6 +22,6 @@ public final class NumberSchema extends BaseSchema {
 
     @Override
     public boolean isThatClass(Object obj) {
-        return obj instanceof Integer;
+        return obj instanceof Number;
     }
 }

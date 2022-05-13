@@ -4,17 +4,18 @@ import hexlet.code.requirements.Required;
 import hexlet.code.requirements.Requirable;
 import hexlet.code.schemas.BaseSchema;
 
-public final class MinLength extends Required implements Requirable {
-    private int length;
+public final class MinLength implements Requirable {
+    private final int length;
+    private final BaseSchema schema;
 
-    public MinLength(int lengt, BaseSchema schem) {
-        super(schem);
-        this.length = lengt;
+    public MinLength(int length, BaseSchema schema) {
+        this.length = length;
+        this.schema = schema;
     }
 
     @Override
     public boolean isValid(Object obj) {
-        if (!super.isValid(obj)) {
+        if (!schema.isThatClass(obj)) {
             return false;
         }
         return String.valueOf(obj).length() >= length;
