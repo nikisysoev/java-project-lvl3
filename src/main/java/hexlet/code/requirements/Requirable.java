@@ -1,5 +1,5 @@
 package hexlet.code.requirements;
 
 public interface Requirable {
-    Boolean isValid(Object obj);
+    boolean isValid(Object obj);
 }

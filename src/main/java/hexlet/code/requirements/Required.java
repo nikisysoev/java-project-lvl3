@@ -3,16 +3,16 @@ package hexlet.code.requirements;
 import hexlet.code.schemas.BaseSchema;
 
 public class Required implements Requirable {
-    private BaseSchema schema;
+    private final BaseSchema schema;
 
-    public Required(BaseSchema schem) {
-        this.schema = schem;
+    public Required(BaseSchema schema) {
+        this.schema = schema;
     }
 
     /**
      */
     @Override
-    public Boolean isValid(Object obj) {
+    public boolean isValid(Object obj) {
         return schema.isThatClass(obj) && schema.isNotEmpty(obj);
     }
 }

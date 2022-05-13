@@ -4,14 +4,14 @@ import hexlet.code.schemas.BaseSchema;
 import java.util.Objects;
 
 public final class NotRequired implements Requirable {
-    private BaseSchema schema;
+    private final BaseSchema schema;
 
-    public NotRequired(BaseSchema schem) {
-        this.schema = schem;
+    public NotRequired(BaseSchema schema) {
+        this.schema = schema;
     }
 
     @Override
-    public Boolean isValid(Object obj) {
+    public boolean isValid(Object obj) {
         return Objects.isNull(obj) || schema.isThatClass(obj);
     }
 }

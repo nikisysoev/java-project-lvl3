@@ -13,7 +13,7 @@ public final class MinLength extends Required implements Requirable {
     }
 
     @Override
-    public Boolean isValid(Object obj) {
+    public boolean isValid(Object obj) {
         if (!super.isValid(obj)) {
             return false;
         }

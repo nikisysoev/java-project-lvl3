@@ -5,12 +5,12 @@ import hexlet.code.requirements.Requirable;
 import hexlet.code.schemas.BaseSchema;
 
 public final class Positive extends Required implements Requirable {
-    public Positive(BaseSchema schem) {
-        super(schem);
+    public Positive(BaseSchema schema) {
+        super(schema);
     }
 
     @Override
-    public Boolean isValid(Object obj) {
+    public boolean isValid(Object obj) {
         if (!super.isValid(obj)) {
             return false;
         }

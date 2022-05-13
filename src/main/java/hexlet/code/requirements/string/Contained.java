@@ -14,7 +14,7 @@ public final class Contained extends Required implements Requirable {
     }
 
     @Override
-    public Boolean isValid(Object obj) {
+    public boolean isValid(Object obj) {
         if (!super.isValid(obj) || Objects.isNull(substring)) {
             return false;
         }

@@ -9,13 +9,13 @@ import java.util.Map;
 public final class Size extends Required implements Requirable {
     private final int size;
 
-    public Size(int siz, BaseSchema schem) {
-        super(schem);
-        this.size = siz;
+    public Size(BaseSchema schema, int size) {
+        super(schema);
+        this.size = size;
     }
 
     @Override
-    public Boolean isValid(Object obj) {
+    public boolean isValid(Object obj) {
         if (!super.isValid(obj)) {
             return false;
         }
