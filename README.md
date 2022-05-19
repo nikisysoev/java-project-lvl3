@@ -16,7 +16,7 @@ method to check it.
 
 Provides 'required', 'contains' and 'minLength' validations.
 
-```
+```ts
 import hexlet.code.Validator;
 import hexlet.code.schemas.StringSchema;
 
@@ -52,7 +52,7 @@ schema.minLength(FIVE).isValid("what"); // false
 
 Provides 'required', 'positive' and 'range' validations.
 
-```
+```ts
 import hexlet.code.Validator;
 import hexlet.code.schemas.NumberSchema;
 
@@ -85,7 +85,7 @@ schema.isValid(11); // false
 
 Provides 'required' and 'size' validations.
 
-```
+```ts
 import hexlet.code.Validator;
 import hexlet.code.schemas.MapSchema;
 
@@ -115,7 +115,7 @@ schema.isValid(data); // true
 
 Validation complex nested data may require validating not only the map object, but also the nested data.
 
-```
+```ts
 import hexlet.code.Validator;
 import hexlet.code.schemas.MapSchema;
 import hexlet.code.schemas.BaseSchema;
