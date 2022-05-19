@@ -7,17 +7,17 @@ import java.util.Map;
 
 public final class MapSchema extends BaseSchema {
     public MapSchema required() {
-        setRequirement(new Required(this));
+        setRequirements(new Required(this));
         return this;
     }
 
     public MapSchema shape(Map<String, BaseSchema> shapes) {
-        setRequirement(new Shape(this, shapes));
+        setRequirements(new Shape(this, shapes));
         return this;
     }
 
     public MapSchema sizeof(int size) {
-        setRequirement(new Size(this, size));
+        setRequirements(new Size(this, size));
         return this;
     }
 

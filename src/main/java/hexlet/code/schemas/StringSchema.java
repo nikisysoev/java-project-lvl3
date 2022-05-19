@@ -6,17 +6,17 @@ import hexlet.code.requirements.string.MinLength;
 
 public final class StringSchema extends BaseSchema {
     public StringSchema required() {
-        setRequirement(new Required(this));
+        setRequirements(new Required(this));
         return this;
     }
 
     public StringSchema contains(String substring) {
-        setRequirement(new Contained(substring, this));
+        setRequirements(new Contained(substring, this));
         return this;
     }
 
     public StringSchema minLength(int length) {
-        setRequirement(new MinLength(length, this));
+        setRequirements(new MinLength(length, this));
         return this;
     }
 

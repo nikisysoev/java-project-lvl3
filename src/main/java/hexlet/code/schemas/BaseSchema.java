@@ -6,19 +6,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class BaseSchema {
-    private final List<Requirable> requirement;
+    private final List<Requirable> requirements;
 
     public BaseSchema() {
-        requirement = new ArrayList<>();
-        requirement.add(new NotRequired(this));
+        requirements = new ArrayList<>();
+        requirements.add(new NotRequired(this));
     }
 
-    public final void setRequirement(Requirable requirable) {
-        this.requirement.add(requirable);
+    public final void setRequirements(Requirable requirable) {
+        this.requirements.add(requirable);
     }
 
     public final boolean isValid(Object obj) {
-        for (Requirable requirable: requirement) {
+        for (Requirable requirable: requirements) {
             if (!requirable.isValid(obj)) {
                 return false;
             }

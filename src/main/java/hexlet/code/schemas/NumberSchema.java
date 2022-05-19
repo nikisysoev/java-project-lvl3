@@ -6,17 +6,17 @@ import hexlet.code.requirements.number.Range;
 
 public final class NumberSchema extends BaseSchema {
     public NumberSchema required() {
-        setRequirement(new Required(this));
+        setRequirements(new Required(this));
         return this;
     }
 
     public NumberSchema positive() {
-        setRequirement(new Positive(this));
+        setRequirements(new Positive(this));
         return this;
     }
 
     public NumberSchema range(int number1, int number2) {
-        setRequirement(new Range(this, number1, number2));
+        setRequirements(new Range(this, number1, number2));
         return this;
     }
 
